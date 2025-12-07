@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Zijian（James）Shen | Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, sans-serif;
+      background-color: #f5f5f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem 4rem;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      margin-bottom: 2rem;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 1.5rem;
+    }
+
+    .name {
+      font-size: 1.9rem;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin-right: 0.75rem;
+      text-decoration: none;
+      color: #3366cc;
+      font-size: 0.95rem;
+    }
+
+    h2 {
+      margin-top: 2rem;
+      margin-bottom: 0.75rem;
+      font-size: 1.3rem;
+      border-left: 4px solid #222;
+      padding-left: 0.5rem;
+    }
+
+    h3 {
+      margin: 0.3rem 0;
+      font-size: 1.05rem;
+    }
+
+    .item-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 0.5rem;
+      font-weight: 600;
+    }
+
+    .item-sub {
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    ul {
+      margin: 0.3rem 0 0.8rem 1.1rem;
+      padding-left: 0;
+      font-size: 0.95rem;
+    }
+
+    li {
+      margin-bottom: 0.25rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+      font-size: 0.85rem;
+    }
+
+    .tag {
+      background: #e5e5ff;
+      padding: 0.2rem 0.5rem;
+      border-radius: 999px;
+    }
+
+    .pill {
+      display: inline-block;
+      border-radius: 999px;
+      padding: 0.1rem 0.6rem;
+      font-size: 0.8rem;
+      background: #111;
+      color: #fff;
+      margin-left: 0.4rem;
+    }
+
+    .two-col {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 2rem;
+      align-items: flex-start;
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .two-col {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    footer {
+      margin-top: 3rem;
+      font-size: 0.85rem;
+      color: #777;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <div class="name">Zijian Shen</div>
+        <div class="subtitle">
+          B.S. in Statistics & Economics • University of Illinois Urbana-Champaign
+        </div>
+      </div>
+      <div class="contact">
+        <a href="tel:+12179790987">+1 (217) 979-0987</a>
+        <a href="mailto:shenjames824@gmail.com">shenjames824@gmail.com</a>
+      </div>
+    </header>
+
+    <section>
+      <h2>About Me</h2>
+      <p>
+        I am an undergraduate student at the University of Illinois Urbana-Champaign
+        studying Statistics and Economics. I am passionate about data-driven research,
+        financial markets, and the intersection between sports analytics and the digital
+        economy. I enjoy applying quantitative methods to real-world problems through
+        academic projects, internships, and personal ventures.
+      </p>
+    </section>
+
+    <div class="two-col">
+      <div>
+        <section>
+          <h2>Education</h2>
+          <div>
+            <div class="item-header">
+              <span>University of Illinois Urbana-Champaign</span>
+              <span class="item-sub">Aug 2022 – Present</span>
+            </div>
+            <div class="item-sub">
+              B.S. in Statistics & Economics • GPA: 3.90/4.00
+              <span class="pill">James Scholar</span>
+            </div>
+            <ul>
+              <li>Dean’s List, LAS Honors, James Scholar</li>
+              <li>
+                Selected Coursework: Statistical Modeling, Statistical Data Management,
+                Baseball Analytics, Environmental Economics, Health Economics, Economic
+                Forecasting, Calculus III, Applied Linear Algebra.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Research & Internship Experience</h2>
+
+          <div>
+            <div class="item-header">
+              <span>Scientific Research Intern, USTC</span>
+              <span class="item-sub">Jun 2025 – Sep 2025</span>
+            </div>
+            <div class="item-sub">
+              Self-Reflective Planning with Knowledge Graphs
+            </div>
+            <ul>
+              <li>
+                Contributed to improving reasoning reliability in large language models
+                for knowledge-graph-based question answering tasks.
+              </li>
+              <li>Co-authored a paper accepted by AAAI-26.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="item-header">
+              <span>Investment Department Intern, HuaAn Securities</span>
+              <span class="item-sub">Jun 2024 – Aug 2024</span>
+            </div>
+            <ul>
+              <li>Performed market tracking and data analysis to support investment decisions.</li>
+              <li>
+                Created visualizations and helped evaluate fund performance and fixed-income
+                portfolio movements.
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="item-header">
+              <span>Intern, Time Publishing and Media Co., Ltd.</span>
+              <span class="item-sub">Dec 2022 – Jan 2023</span>
+            </div>
+            <ul>
+              <li>Collected regulatory and industry information for internal reports.</li>
+              <li>Prepared meeting materials and summaries for company-wide discussions.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2>Projects & Leadership</h2>
+
+          <div>
+            <div class="item-header">
+              <span>Course Assistant, LAS 100</span>
+              <span class="item-sub">Sep 2025 – Present</span>
+            </div>
+            <ul>
+              <li>Completed LAS 399 training in teaching, mentorship, and communication.</li>
+              <li>Assisted with attendance tracking and assignment grading.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="item-header">
+              <span>Founder, Sports Trading Cards Venture</span>
+              <span class="item-sub">Feb 2023 – Present</span>
+            </div>
+            <ul>
+              <li>
+                Lead a five-person team investing in NBA, NFL, and soccer trading cards,
+                applying performance-based valuation strategies.
+              </li>
+              <li>
+                Conduct trades through eBay, Goldin, Card Hobby Online, and card shows
+                in Chicago, Dallas, and Los Angeles.
+              </li>
+              <li>Achieved an approximate 35% average net profit across transactions.</li>
+            </ul>
+            <div class="tag-list">
+              <span class="tag">Entrepreneurship</span>
+              <span class="tag">Sports Analytics</span>
+              <span class="tag">Investment</span>
+            </div>
+          </div>
+
+          <div>
+            <div class="item-header">
+              <span>Honor Project, Econ 490 (Economic Growth)</span>
+              <span class="item-sub">Fall 2024</span>
+            </div>
+            <ul>
+              <li>Researched how the development of the sports industry impacts national economic growth.</li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="item-header">
+              <span>Honor Project, Econ 303 (Intermediate Macroeconomics)</span>
+              <span class="item-sub">Fall 2024</span>
+            </div>
+            <ul>
+              <li>Led a study on why China’s household saving rate is significantly higher than other countries.</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+
+      <aside>
+        <section>
+          <h2>Publications</h2>
+          <ul>
+            <li>
+              <strong>Sustainable Tourism in Huanggang Village</strong><br />
+              Shen, Z., Gao, S., Zhang, Z., & Songze, Z.  
+              <em>Science and Life</em> (accepted).
+            </li>
+            <li>
+              <strong>Self-Reflective Planning with Knowledge Graphs</strong><br />
+              Zhang, J., Ye, L., Zhang, K., Bai, M., Zhang, Y., Shen, Z., & Zhang, M.  
+              AAAI-26.
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Skills</h2>
+          <h3>Languages</h3>
+          <ul><li>English</li><li>Chinese</li></ul>
+
+          <h3>Technical Skills</h3>
+          <ul>
+            <li>R (RStudio)</li>
+            <li>Python</li>
+            <li>Excel, PowerPoint, Word</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Interests</h2>
+          <ul>
+            <li>Basketball, Soccer, Table Tennis, Tennis</li>
+            <li>Frisbee, Skiing, Badminton</li>
+            <li>Sports analytics & digital sports industry</li>
+          </ul>
+        </section>
+      </aside>
+    </div>
+
+    <footer>
+      © <span id="year"></span> Zijian Shen. All rights reserved.
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
