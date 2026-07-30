@@ -407,15 +407,27 @@
 
     .life-copy {
       display: grid;
-      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
-      gap: 12px;
+      grid-template-columns: minmax(260px, 0.74fr) minmax(0, 1.26fr);
+      gap: 16px;
       align-items: start;
+    }
+
+    .life-text {
+      height: 100%;
+      min-height: 250px;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fbfcfd;
+      padding: 18px;
+      display: grid;
+      align-content: start;
+      gap: 12px;
     }
 
     .life-gallery {
       display: grid;
-      gap: 14px;
-      margin-top: 6px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
     }
 
     .gallery-title {
@@ -423,6 +435,13 @@
       color: var(--ink);
       font-size: 0.9rem;
       font-weight: 760;
+    }
+
+    .gallery-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: #fff;
+      padding: 14px;
     }
 
     .photo-grid {
@@ -501,6 +520,10 @@
       }
 
       .life-copy {
+        grid-template-columns: 1fr;
+      }
+
+      .life-gallery {
         grid-template-columns: 1fr;
       }
 
@@ -727,20 +750,22 @@
       <div class="life-grid">
         <div class="life-photo" role="img" aria-label="Zijian Shen outside work"></div>
         <div class="life-copy">
-          <h3>I care a lot about the human side of work.</h3>
-          <p class="tagline">
-            Outside academic and professional projects, I spend a lot of time around sports,
-            collectibles, food, and conversations with friends. Those interests are not
-            separate from my work: they are where I learned to read markets, understand people,
-            communicate clearly, and stay curious about how decisions actually get made.
-          </p>
-          <p class="tagline">
-            Sports especially shaped how I think. I follow performance, pricing, narratives,
-            fan behavior, and media attention closely, which is why sports analytics and
-            entertainment analytics are natural career directions for me.
-          </p>
+          <div class="life-text">
+            <h3>I care a lot about the human side of work.</h3>
+            <p class="tagline">
+              Outside academic and professional projects, I spend a lot of time around sports,
+              collectibles, food, and conversations with friends. Those interests are not
+              separate from my work: they are where I learned to read markets, understand people,
+              communicate clearly, and stay curious about how decisions actually get made.
+            </p>
+            <p class="tagline">
+              Sports especially shaped how I think. I follow performance, pricing, narratives,
+              fan behavior, and media attention closely, which is why sports analytics and
+              entertainment analytics are natural career directions for me.
+            </p>
+          </div>
           <div class="life-gallery">
-            <div>
+            <div class="gallery-card">
               <p class="gallery-title">Sports / Game Day</p>
               <div class="photo-grid">
                 <img class="mini-photo" src="assets/life/sports-1.jpg" alt="Sports and game day photo 1" />
@@ -749,7 +774,7 @@
                 <img class="mini-photo" src="assets/life/sports-4.jpg" alt="Sports and game day photo 4" />
               </div>
             </div>
-            <div>
+            <div class="gallery-card">
               <p class="gallery-title">Cards / Collections</p>
               <div class="photo-grid cards">
                 <img class="mini-photo" src="assets/life/cards-1.jpg" alt="Sports card collection photo 1" />
