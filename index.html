@@ -5,9 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Zijian (James) Shen - portfolio for data analytics, finance, search optimization, and applied AI."
+    content="Zijian (James) Shen - portfolio for data analytics, sports analytics, finance, search optimization, and applied AI."
   />
-  <title>Zijian (James) Shen | Data, Finance & Applied AI</title>
+  <title>Zijian (James) Shen | Data, Sports, Finance & Applied AI</title>
   <style>
     :root {
       --ink: #16202a;
@@ -181,6 +181,7 @@
       border-radius: 8px;
       border: 1px solid var(--line);
       object-fit: cover;
+      object-position: 58% 34%;
       background: var(--blue-soft);
     }
 
@@ -259,7 +260,7 @@
     .focus-grid,
     .work-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 14px;
     }
 
@@ -388,6 +389,48 @@
       gap: 12px;
     }
 
+    .life-grid {
+      display: grid;
+      grid-template-columns: minmax(280px, 0.86fr) minmax(0, 1.14fr);
+      gap: 16px;
+      align-items: stretch;
+    }
+
+    .life-photo {
+      min-height: 360px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background-image: url("assets/profile.jpg");
+      background-size: cover;
+      background-position: 58% 36%;
+    }
+
+    .life-copy {
+      display: grid;
+      align-content: center;
+      gap: 12px;
+    }
+
+    .photo-strip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .photo-slot {
+      min-height: 92px;
+      border: 1px dashed #c7d2da;
+      border-radius: 8px;
+      background: #fbfcfd;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-size: 0.82rem;
+      text-align: center;
+      padding: 10px;
+    }
+
     .callout {
       border-left: 4px solid var(--coral);
       padding-left: 14px;
@@ -407,7 +450,8 @@
       .focus-grid,
       .work-grid,
       .two-col,
-      .skill-grid {
+      .skill-grid,
+      .life-grid {
         grid-template-columns: 1fr;
       }
 
@@ -437,6 +481,10 @@
       h1 {
         font-size: 2.35rem;
       }
+
+      .life-photo {
+        min-height: 300px;
+      }
     }
   </style>
 </head>
@@ -448,9 +496,10 @@
         <span>Zijian (James) Shen</span>
       </div>
       <div class="nav">
-        <a href="#focus">Focus</a>
         <a href="#work">Work</a>
-        <a href="#experience">Experience</a>
+        <a href="#agent">Agent</a>
+        <a href="#projects">Projects</a>
+        <a href="#life">Life</a>
         <a href="#skills">Skills</a>
         <a href="mailto:shenjames824@gmail.com">Contact</a>
       </div>
@@ -458,8 +507,8 @@
 
     <div class="hero">
       <header class="panel intro">
-        <p class="eyebrow">Data analytics + finance judgment + applied AI</p>
-        <h1>I build analysis that turns messy signals into decisions.</h1>
+        <p class="eyebrow">Data analytics + data science + sports analytics + finance + search optimization + applied AI</p>
+        <h1>Seeking Fall 2027 full-time and internship opportunities in the U.S.</h1>
         <p class="lead">
           I am Zijian (James) Shen, an analytics student at UC Berkeley and a Statistics &
           Economics graduate from UIUC. My work sits where business questions meet data:
@@ -467,7 +516,7 @@
           AI-agent product building, and sports-market analytics.
         </p>
         <div class="actions">
-          <a class="button primary" href="#work">See Featured Work</a>
+          <a class="button primary" href="#work">See Work Focus</a>
           <a class="button" href="https://jmstitle.streamlit.app/" target="_blank" rel="noreferrer">Headline Agent</a>
           <a class="button" href="https://github.com/Zijianss/jmstitle" target="_blank" rel="noreferrer">GitHub</a>
         </div>
@@ -475,15 +524,15 @@
 
       <aside class="panel profile" aria-label="Profile summary">
         <div class="avatar-row">
-          <img class="avatar" src="https://github.com/Zijianss.png" alt="Zijian Shen profile photo" />
+          <img class="avatar" src="assets/profile.jpg" alt="Zijian Shen profile photo" />
           <div class="name-block">
             <strong>Zijian (James) Shen</strong>
             <span>UC Berkeley M.S. Analytics</span>
           </div>
         </div>
         <p class="tagline">
-          Open to North America roles in data science, product/marketing analytics, finance,
-          search/growth analytics, supply chain, and business strategy.
+          Open to U.S. roles in data science, data/product analytics, finance/IB,
+          growth/search, supply chain, sports analytics, and business strategy.
         </p>
         <div class="contact">
           <a href="tel:+12179790987">+1 217-979-0987</a>
@@ -499,12 +548,24 @@
       </aside>
     </div>
 
-    <section id="focus">
+    <section id="work">
       <div class="section-head">
-        <h2>What I Work On</h2>
-        <p class="section-note">Three directions that show how I connect technical work with commercial decisions.</p>
+        <h2>Work</h2>
+        <p class="section-note">The professional lanes I am targeting for 2027 full-time and internship recruiting.</p>
       </div>
       <div class="focus-grid">
+        <article class="card featured">
+          <h3>Data and product analytics</h3>
+          <p class="tagline">
+            I like translating user behavior, business questions, and operating data into
+            metrics, experiments, dashboards, and clear recommendations.
+          </p>
+          <div class="chips">
+            <span class="chip">SQL / Python</span>
+            <span class="chip">KPI design</span>
+            <span class="chip">Dashboards</span>
+          </div>
+        </article>
         <article class="card search">
           <h3>Search, growth, and customer acquisition</h3>
           <p class="tagline">
@@ -530,24 +591,24 @@
           </div>
         </article>
         <article class="card featured">
-          <h3>Applied AI and model evaluation</h3>
+          <h3>Sports and entertainment analytics</h3>
           <p class="tagline">
-            I build small, practical AI systems and evaluate whether model outputs actually
-            help users make better choices under limited feedback.
+            I connect sports performance, fan attention, pricing, media narratives, and
+            marketplace behavior through data-heavy projects and real trading experience.
           </p>
           <div class="chips">
-            <span class="chip">LLM evaluation</span>
-            <span class="chip">Bandits</span>
-            <span class="chip">Model validation</span>
+            <span class="chip">Sports analytics</span>
+            <span class="chip">Marketplace data</span>
+            <span class="chip">Fan behavior</span>
           </div>
         </article>
       </div>
     </section>
 
-    <section id="work">
+    <section id="agent">
       <div class="section-head">
-        <h2>Featured Work</h2>
-        <p class="section-note">Selected projects and experiences that best represent my current profile.</p>
+        <h2>Agent</h2>
+        <p class="section-note">My strongest product-style build: a real AI agent for headline generation, scoring, and comparison.</p>
       </div>
       <div class="work-grid">
         <article class="card featured">
@@ -584,7 +645,15 @@
             <span class="chip">PyTorch</span>
           </div>
         </article>
+      </div>
+    </section>
 
+    <section id="projects">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <p class="section-note">Research and applied analytics projects that show how I work with messy data, models, and business context.</p>
+      </div>
+      <div class="work-grid">
         <article class="card search">
           <div class="meta">
             <h3>Baidu Search Visibility Diagnosis</h3>
@@ -620,6 +689,35 @@
             <span class="chip">Industry research</span>
           </div>
         </article>
+      </div>
+    </section>
+
+    <section id="life">
+      <div class="section-head">
+        <h2>Life Outside Work</h2>
+        <p class="section-note">A little context beyond resumes: sports, food, travel, trading cards, and people.</p>
+      </div>
+      <div class="life-grid">
+        <div class="life-photo" role="img" aria-label="Zijian Shen outside work"></div>
+        <div class="life-copy">
+          <h3>I care a lot about the human side of work.</h3>
+          <p class="tagline">
+            Outside academic and professional projects, I spend a lot of time around sports,
+            collectibles, food, travel, and conversations with friends. Those interests are not
+            separate from my work: they are where I learned to read markets, understand people,
+            communicate clearly, and stay curious about how decisions actually get made.
+          </p>
+          <p class="tagline">
+            Sports especially shaped how I think. I follow performance, pricing, narratives,
+            fan behavior, and media attention closely, which is why sports analytics and
+            entertainment analytics are natural career directions for me.
+          </p>
+          <div class="photo-strip" aria-label="Future life photo placeholders">
+            <div class="photo-slot">sports / game day</div>
+            <div class="photo-slot">campus / travel</div>
+            <div class="photo-slot">cards / collections</div>
+          </div>
+        </div>
       </div>
     </section>
 
