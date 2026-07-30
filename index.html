@@ -5,32 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta
     name="description"
-    content="Zijian (James) Shen - analytics, finance, search optimization, and applied AI portfolio."
+    content="Zijian (James) Shen - portfolio for data analytics, finance, search optimization, and applied AI."
   />
-  <title>Zijian (James) Shen | Analytics, Finance & Applied AI</title>
+  <title>Zijian (James) Shen | Data, Finance & Applied AI</title>
   <style>
     :root {
-      --ink: #17202a;
-      --muted: #5c6670;
-      --line: #dfe5eb;
+      --ink: #16202a;
+      --muted: #5c6873;
       --paper: #ffffff;
-      --wash: #f3f6f8;
-      --navy: #153a5b;
-      --green: #0e6a5b;
-      --gold: #b8860b;
-      --chip: #eaf1f8;
-      --shadow: 0 18px 50px rgba(23, 32, 42, 0.08);
+      --soft: #f5f7f8;
+      --line: #dce4ea;
+      --navy: #14324a;
+      --teal: #0f6b61;
+      --amber: #b37a15;
+      --coral: #b55448;
+      --blue-soft: #e8f0f7;
+      --green-soft: #e8f3ef;
+      --amber-soft: #fbf1dc;
+      --shadow: 0 18px 46px rgba(22, 32, 42, 0.08);
     }
 
     * {
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       margin: 0;
       font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: var(--wash);
       color: var(--ink);
+      background: var(--soft);
       line-height: 1.55;
     }
 
@@ -44,9 +51,9 @@
     }
 
     .shell {
-      max-width: 1120px;
+      width: min(1120px, calc(100% - 40px));
       margin: 0 auto;
-      padding: 28px 22px 52px;
+      padding: 24px 0 54px;
     }
 
     .topbar {
@@ -54,30 +61,28 @@
       align-items: center;
       justify-content: space-between;
       gap: 18px;
-      margin-bottom: 24px;
+      margin-bottom: 20px;
+      font-size: 0.93rem;
       color: var(--muted);
-      font-size: 0.94rem;
     }
 
-    .mark {
+    .brand {
       display: flex;
       align-items: center;
       gap: 10px;
-      color: var(--ink);
       font-weight: 760;
-      letter-spacing: 0;
+      color: var(--ink);
     }
 
-    .monogram {
+    .mark {
       width: 36px;
       height: 36px;
       border-radius: 8px;
-      background: linear-gradient(135deg, var(--navy), var(--green));
+      background: var(--navy);
       color: #fff;
       display: grid;
       place-items: center;
       font-size: 0.9rem;
-      box-shadow: var(--shadow);
     }
 
     .nav {
@@ -89,46 +94,44 @@
 
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 1.55fr) minmax(280px, 0.85fr);
-      gap: 26px;
+      grid-template-columns: minmax(0, 1.42fr) minmax(300px, 0.78fr);
+      gap: 18px;
       align-items: stretch;
-      margin-bottom: 28px;
     }
 
-    .hero-card,
-    .profile-card,
-    section {
+    .panel,
+    section,
+    .card {
       background: var(--paper);
       border: 1px solid var(--line);
       border-radius: 8px;
       box-shadow: var(--shadow);
     }
 
-    .hero-card {
+    .intro {
       padding: 34px;
-      border-top: 5px solid var(--green);
+      border-top: 5px solid var(--teal);
     }
 
     .eyebrow {
-      margin: 0 0 10px;
-      color: var(--green);
-      font-weight: 760;
-      letter-spacing: 0;
-      text-transform: uppercase;
+      margin: 0 0 12px;
+      color: var(--teal);
       font-size: 0.78rem;
+      font-weight: 760;
+      text-transform: uppercase;
     }
 
     h1 {
       margin: 0;
-      max-width: 780px;
-      font-size: 3.6rem;
-      line-height: 1.02;
+      max-width: 800px;
+      font-size: 3.45rem;
+      line-height: 1.04;
       letter-spacing: 0;
     }
 
     .lead {
-      max-width: 780px;
       margin: 18px 0 0;
+      max-width: 780px;
       color: var(--muted);
       font-size: 1.08rem;
     }
@@ -141,16 +144,16 @@
     }
 
     .button {
+      min-height: 40px;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 40px;
       padding: 9px 14px;
-      border-radius: 8px;
       border: 1px solid var(--line);
-      font-weight: 720;
+      border-radius: 8px;
       background: #fff;
       color: var(--ink);
+      font-weight: 720;
     }
 
     .button.primary {
@@ -159,30 +162,45 @@
       border-color: var(--ink);
     }
 
-    .profile-card {
+    .profile {
       padding: 22px;
       display: flex;
       flex-direction: column;
       gap: 18px;
     }
 
+    .avatar-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
     .avatar {
-      width: 92px;
-      height: 92px;
+      width: 82px;
+      height: 82px;
       border-radius: 8px;
-      object-fit: cover;
       border: 1px solid var(--line);
-      background: var(--chip);
+      object-fit: cover;
+      background: var(--blue-soft);
     }
 
-    .contact-list {
-      display: grid;
-      gap: 8px;
+    .name-block strong {
+      display: block;
+      font-size: 1.1rem;
+    }
+
+    .name-block span {
       color: var(--muted);
-      font-size: 0.95rem;
+      font-size: 0.92rem;
     }
 
-    .stat-grid {
+    .contact {
+      display: grid;
+      gap: 7px;
+      font-size: 0.94rem;
+    }
+
+    .quick-stats {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
@@ -209,8 +227,8 @@
     }
 
     section {
-      padding: 26px;
       margin-top: 18px;
+      padding: 26px;
     }
 
     .section-head {
@@ -218,73 +236,96 @@
       justify-content: space-between;
       align-items: end;
       gap: 18px;
+      padding-bottom: 13px;
       margin-bottom: 16px;
       border-bottom: 1px solid var(--line);
-      padding-bottom: 12px;
     }
 
     h2 {
       margin: 0;
-      font-size: 1.15rem;
+      font-size: 1.14rem;
       letter-spacing: 0;
       text-transform: uppercase;
     }
 
     .section-note {
       margin: 0;
+      max-width: 510px;
       color: var(--muted);
       font-size: 0.92rem;
       text-align: right;
     }
 
-    .grid {
+    .focus-grid,
+    .work-grid {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 14px;
     }
 
+    .work-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .card {
-      border: 1px solid var(--line);
-      border-radius: 8px;
       padding: 16px;
-      background: #fff;
+      box-shadow: none;
     }
 
-    .card.highlight {
-      border-color: rgba(14, 106, 91, 0.34);
-      background: linear-gradient(180deg, #ffffff, #f7fbfa);
+    .card.featured {
+      border-color: rgba(15, 107, 97, 0.35);
+      background: #f8fcfb;
     }
 
-    .item-title {
-      display: flex;
-      justify-content: space-between;
-      gap: 12px;
-      margin: 0 0 4px;
+    .card.finance {
+      border-color: rgba(179, 122, 21, 0.34);
+      background: #fffdf8;
+    }
+
+    .card.search {
+      border-color: rgba(20, 50, 74, 0.26);
+      background: #f8fbfd;
+    }
+
+    .tagline {
+      margin: 0 0 8px;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    h3 {
+      margin: 0 0 8px;
       font-size: 1rem;
+      line-height: 1.3;
     }
 
-    .date {
-      flex: 0 0 auto;
-      color: var(--muted);
-      font-size: 0.87rem;
-      font-weight: 520;
-    }
-
-    .role {
-      margin: 0 0 10px;
-      color: var(--muted);
-      font-size: 0.92rem;
+    p {
+      margin: 0;
     }
 
     ul {
       margin: 0;
       padding-left: 18px;
       color: #303941;
-      font-size: 0.94rem;
+      font-size: 0.93rem;
     }
 
     li {
       margin: 5px 0;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 7px;
+    }
+
+    .meta span {
+      flex: 0 0 auto;
+      color: var(--muted);
+      font-size: 0.86rem;
+      font-weight: 560;
     }
 
     .chips {
@@ -295,43 +336,78 @@
     }
 
     .chip {
+      display: inline-flex;
+      align-items: center;
       border-radius: 999px;
       padding: 4px 9px;
-      background: var(--chip);
+      background: var(--blue-soft);
       color: var(--navy);
       font-size: 0.8rem;
       font-weight: 690;
     }
 
-    .split {
+    .timeline {
+      display: grid;
+      gap: 12px;
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 168px minmax(0, 1fr);
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .timeline-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .date {
+      color: var(--muted);
+      font-size: 0.9rem;
+      font-weight: 650;
+    }
+
+    .role {
+      margin: 3px 0 8px;
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .two-col {
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
       gap: 14px;
     }
 
-    .skill-columns {
+    .skill-grid {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       gap: 12px;
     }
 
-    .skill-columns h3 {
-      margin: 0 0 8px;
-      font-size: 0.98rem;
+    .callout {
+      border-left: 4px solid var(--coral);
+      padding-left: 14px;
+      color: var(--muted);
+      font-size: 0.96rem;
     }
 
     footer {
-      margin-top: 26px;
+      margin-top: 28px;
       color: var(--muted);
-      font-size: 0.88rem;
       text-align: center;
+      font-size: 0.88rem;
     }
 
-    @media (max-width: 860px) {
+    @media (max-width: 900px) {
       .hero,
-      .grid,
-      .split,
-      .skill-columns {
+      .focus-grid,
+      .work-grid,
+      .two-col,
+      .skill-grid {
         grid-template-columns: 1fr;
       }
 
@@ -340,8 +416,8 @@
       }
 
       .section-note {
-        text-align: left;
         margin-top: 6px;
+        text-align: left;
       }
 
       .topbar {
@@ -353,8 +429,13 @@
         justify-content: flex-start;
       }
 
+      .timeline-item {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+
       h1 {
-        font-size: 2.4rem;
+        font-size: 2.35rem;
       }
     }
   </style>
@@ -362,144 +443,123 @@
 <body>
   <main class="shell">
     <nav class="topbar" aria-label="Portfolio navigation">
-      <div class="mark">
-        <span class="monogram">JS</span>
+      <div class="brand">
+        <span class="mark">JS</span>
         <span>Zijian (James) Shen</span>
       </div>
       <div class="nav">
+        <a href="#focus">Focus</a>
+        <a href="#work">Work</a>
         <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
         <a href="mailto:shenjames824@gmail.com">Contact</a>
       </div>
     </nav>
 
     <div class="hero">
-      <header class="hero-card">
-        <p class="eyebrow">Analytics, finance, search optimization, and applied AI</p>
-        <h1>Turning messy business, market, and web data into decisions people can use.</h1>
+      <header class="panel intro">
+        <p class="eyebrow">Data analytics + finance judgment + applied AI</p>
+        <h1>I build analysis that turns messy signals into decisions.</h1>
         <p class="lead">
-          I am a UC Berkeley M.S. Analytics student and UIUC Statistics & Economics graduate
-          with experience across investment banking, search optimization, sports analytics,
-          and AI product research. I enjoy work that connects rigorous data work with clear
-          business communication.
+          I am Zijian (James) Shen, an analytics student at UC Berkeley and a Statistics &
+          Economics graduate from UIUC. My work sits where business questions meet data:
+          investment banking diligence, search visibility diagnostics, CTR modeling,
+          AI-agent product building, and sports-market analytics.
         </p>
         <div class="actions">
-          <a class="button primary" href="#projects">View Selected Work</a>
+          <a class="button primary" href="#work">See Featured Work</a>
           <a class="button" href="https://jmstitle.streamlit.app/" target="_blank" rel="noreferrer">Headline Agent</a>
-          <a class="button" href="https://github.com/Zijianss/jmstitle" target="_blank" rel="noreferrer">GitHub Project</a>
+          <a class="button" href="https://github.com/Zijianss/jmstitle" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </header>
 
-      <aside class="profile-card" aria-label="Profile summary">
-        <img class="avatar" src="https://github.com/Zijianss.png" alt="Zijian Shen profile photo" />
-        <div>
-          <h2>Profile</h2>
-          <p class="role">
-            Open to North America roles in data/product analytics, finance/IB, growth/search,
-            supply chain, and operations strategy.
-          </p>
+      <aside class="panel profile" aria-label="Profile summary">
+        <div class="avatar-row">
+          <img class="avatar" src="https://github.com/Zijianss.png" alt="Zijian Shen profile photo" />
+          <div class="name-block">
+            <strong>Zijian (James) Shen</strong>
+            <span>UC Berkeley M.S. Analytics</span>
+          </div>
         </div>
-        <div class="contact-list">
+        <p class="tagline">
+          Open to North America roles in data science, product/marketing analytics, finance,
+          search/growth analytics, supply chain, and business strategy.
+        </p>
+        <div class="contact">
           <a href="tel:+12179790987">+1 217-979-0987</a>
           <a href="mailto:shenjames824@gmail.com">shenjames824@gmail.com</a>
           <a href="https://zijianss.github.io/">zijianss.github.io</a>
         </div>
-        <div class="stat-grid">
+        <div class="quick-stats">
           <div class="stat"><strong>3.90</strong><span>UIUC GPA</span></div>
-          <div class="stat"><strong>5,000+</strong><span>transactions tracked</span></div>
-          <div class="stat"><strong>17K</strong><span>A/B headlines modeled</span></div>
+          <div class="stat"><strong>17K</strong><span>A/B-tested headlines</span></div>
           <div class="stat"><strong>15%</strong><span>response-rate lift</span></div>
+          <div class="stat"><strong>5,000+</strong><span>market transactions</span></div>
         </div>
       </aside>
     </div>
 
-    <section id="experience">
+    <section id="focus">
       <div class="section-head">
-        <h2>Experience</h2>
-        <p class="section-note">Finance, search/growth, data quality, and client-ready analysis.</p>
+        <h2>What I Work On</h2>
+        <p class="section-note">Three directions that show how I connect technical work with commercial decisions.</p>
       </div>
-      <div class="grid">
-        <article class="card highlight">
-          <div class="item-title">
-            <strong>CICC Investment Banking Intern</strong>
-            <span class="date">Jul 2026 - Present</span>
+      <div class="focus-grid">
+        <article class="card search">
+          <h3>Search, growth, and customer acquisition</h3>
+          <p class="tagline">
+            I analyze how users, crawlers, content, and ranking systems interact, then turn
+            technical ambiguity into a prioritized product or growth roadmap.
+          </p>
+          <div class="chips">
+            <span class="chip">Technical SEO</span>
+            <span class="chip">CTR modeling</span>
+            <span class="chip">A/B testing</span>
           </div>
-          <p class="role">Transportation & Logistics Group, Investment Banking Division</p>
-          <ul>
-            <li>Reviewed IPO due diligence materials and verification memos by cross-checking disclosures against exchange filings, company websites, public announcements, and regulatory databases.</li>
-            <li>Updated industry and quarterly analysis decks by synthesizing market data, operating metrics, policy updates, peer benchmarking, and company growth assumptions.</li>
-            <li>Checked revenue drivers, cost structure, capacity trends, competitive positioning, and industry-growth logic to improve client-facing material accuracy.</li>
-          </ul>
+        </article>
+        <article class="card finance">
+          <h3>Finance and industry research</h3>
+          <p class="tagline">
+            I am trained to validate sources, pressure-test assumptions, and communicate
+            market, valuation, and operating logic in a format decision-makers can use.
+          </p>
           <div class="chips">
             <span class="chip">IPO diligence</span>
-            <span class="chip">Industry research</span>
             <span class="chip">Valuation support</span>
+            <span class="chip">Industry analysis</span>
           </div>
         </article>
-
-        <article class="card highlight">
-          <div class="item-title">
-            <strong>Baidu Optimization Analyst Intern</strong>
-            <span class="date">May 2026 - Jul 2026</span>
-          </div>
-          <p class="role">Search / Ads / Recommendation Optimization</p>
-          <ul>
-            <li>Audited web properties across crawlability, technical accessibility, content depth, freshness, link authority, page structure, and search visibility.</li>
-            <li>Used Python, BeautifulSoup, Chrome DevTools, Lighthouse, sitemap/robots inspection, HTTP checks, metadata extraction, and rendered DOM review.</li>
-            <li>Diagnosed a client-side rendering issue blocking crawler visibility and proposed SSR/pre-rendering, metadata/schema cleanup, sitemap, and internal-link improvements.</li>
-          </ul>
+        <article class="card featured">
+          <h3>Applied AI and model evaluation</h3>
+          <p class="tagline">
+            I build small, practical AI systems and evaluate whether model outputs actually
+            help users make better choices under limited feedback.
+          </p>
           <div class="chips">
-            <span class="chip">Search engines</span>
-            <span class="chip">Technical SEO</span>
-            <span class="chip">Backend delivery</span>
+            <span class="chip">LLM evaluation</span>
+            <span class="chip">Bandits</span>
+            <span class="chip">Model validation</span>
           </div>
-        </article>
-
-        <article class="card">
-          <div class="item-title">
-            <strong>UIUC Sports Analytics Research Assistant</strong>
-            <span class="date">Jan 2026 - Mar 2026</span>
-          </div>
-          <p class="role">Professor Eck's Sports Lab</p>
-          <ul>
-            <li>Built a player-season MLB dataset using R/tidyverse, Python, Excel, and ggplot2 across Lahman, Retrosheet, FanGraphs, and Baseball-Reference.</li>
-            <li>Resolved player-name differences, duplicate records, team changes, missing values, and inconsistent definitions across 100+ years of data.</li>
-            <li>Engineered BB/PA, HR/PA, WAR per 600 PA, percentiles, PCA coordinates, similarity scores, and charts for a 10+ page research article.</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <div class="item-title">
-            <strong>USTC LLM Research Project</strong>
-            <span class="date">May 2025 - Sep 2025</span>
-          </div>
-          <p class="role">Knowledge graph-based reasoning evaluation</p>
-          <ul>
-            <li>Supported knowledge graph pipelines designed to improve LLM reasoning reliability across multi-step QA tasks.</li>
-            <li>Structured and validated experiment inputs, tracked edge cases, and documented failure patterns for reproducibility and model robustness.</li>
-            <li>Contributed to experiment organization for research publication work associated with AAAI-26.</li>
-          </ul>
         </article>
       </div>
     </section>
 
-    <section id="projects">
+    <section id="work">
       <div class="section-head">
-        <h2>Selected Projects</h2>
-        <p class="section-note">Projects that show product judgment, experimentation, and practical ownership.</p>
+        <h2>Featured Work</h2>
+        <p class="section-note">Selected projects and experiences that best represent my current profile.</p>
       </div>
-      <div class="split">
-        <article class="card highlight">
-          <div class="item-title">
-            <strong>Headline Scoring AI Agent</strong>
-            <span class="date">2026</span>
+      <div class="work-grid">
+        <article class="card featured">
+          <div class="meta">
+            <h3>Headline Scoring AI Agent</h3>
+            <span>2026</span>
           </div>
           <p class="role">Python, Streamlit, PyTorch, Hugging Face, Claude Code, Codex</p>
           <ul>
-            <li>Built and deployed a live web app with Generate, Score, and Compare tools for headline optimization.</li>
-            <li>Fine-tuned a MiniLM scoring model on 17,000 real A/B-tested headlines and converted model outputs into a 0-100 user-facing score.</li>
-            <li>Integrated GPT, Claude, Qwen, and Llama behind a shared interface with secure server-side key handling and drag-and-drop file upload.</li>
+            <li>Built and deployed a live app with Generate, Score, and Compare workflows for headline optimization.</li>
+            <li>Fine-tuned a MiniLM-based scoring model on 17,000 real A/B-tested headlines and improved ranking accuracy from 0.35 to 0.62.</li>
+            <li>Integrated GPT, Claude, Qwen, and Llama behind one interface with server-side key handling and document upload support.</li>
           </ul>
           <div class="chips">
             <a class="chip" href="https://jmstitle.streamlit.app/" target="_blank" rel="noreferrer">Live app</a>
@@ -508,41 +568,148 @@
         </article>
 
         <article class="card">
-          <div class="item-title">
-            <strong>Extending LOLA: LLM Priors for Bandit Headline Optimization</strong>
-            <span class="date">2026</span>
+          <div class="meta">
+            <h3>Extending LOLA: LLM Priors for Headline Bandits</h3>
+            <span>Remote project</span>
           </div>
-          <p class="role">Independent research, experimentation, product analytics</p>
+          <p class="role">CTR prediction, online experimentation, bandit simulation</p>
           <ul>
-            <li>Extended LOLA from selecting among human-written headlines to generating new headline candidates using LLM priors.</li>
-            <li>Designed experiments across generation method, model choice, prompting strategy, and epsilon-greedy bandit warm starts.</li>
-            <li>Found strong fine-tuned priors can outperform LOLA-style bandits at shorter horizons, with crossover only around T=2,000-4,000.</li>
+            <li>Extended LOLA from choosing among human-written headlines to generating and ranking new candidates with LLM priors.</li>
+            <li>Trained a fine-tuned text encoder and regression head on historical headline CTR data, improving held-out rank correlation from 0.449 to 0.522.</li>
+            <li>Compared pure prediction, pure experimentation, and prior-guided bandits across impression horizons up to T=4,000.</li>
           </ul>
+          <div class="chips">
+            <span class="chip">CTR</span>
+            <span class="chip">A/B testing</span>
+            <span class="chip">PyTorch</span>
+          </div>
         </article>
 
-        <article class="card">
-          <div class="item-title">
-            <strong>Sports Card Investment Portfolio</strong>
-            <span class="date">Feb 2023 - Present</span>
+        <article class="card search">
+          <div class="meta">
+            <h3>Baidu Search Visibility Diagnosis</h3>
+            <span>May-Jul 2026</span>
           </div>
-          <p class="role">Founder and lead analyst</p>
+          <p class="role">Search / Ads / Recommendation Optimization</p>
           <ul>
-            <li>Managed an alternative-asset portfolio across sports cards, analyzing price trends, liquidity, player performance, and demand drivers.</li>
-            <li>Executed 5,000+ transactions and built a structured tracking system for asset lifecycle, pricing dynamics, and market signals.</li>
-            <li>Used data-driven decisions to identify opportunities, manage downside risk, and communicate with buyers and sellers.</li>
+            <li>Audited two companies' digital properties across technical accessibility, content depth, link authority, freshness, discoverability, and search visibility.</li>
+            <li>Diagnosed client-side rendering as a root cause blocking crawler and AI-search access by comparing raw HTML, rendered DOM, metadata visibility, and page behavior.</li>
+            <li>Translated technical fixes into growth implications: SSR or pre-rendering, structured metadata, sitemap hygiene, internal linking, and content structure.</li>
           </ul>
+          <div class="chips">
+            <span class="chip">BM25 / PageRank</span>
+            <span class="chip">SSR / CSR</span>
+            <span class="chip">Chrome DevTools</span>
+          </div>
         </article>
 
-        <article class="card">
-          <div class="item-title">
-            <strong>Applied Economics and Business Research</strong>
-            <span class="date">2024 - 2025</span>
+        <article class="card finance">
+          <div class="meta">
+            <h3>CICC Transportation & Supply Chain IBD</h3>
+            <span>Jul 2026-Present</span>
           </div>
-          <p class="role">Health economics, macroeconomics, and industry analysis</p>
+          <p class="role">Investment Banking Intern, Transportation & Logistics Group</p>
           <ul>
-            <li>Completed independent research using Excel, government statistics, academic databases, and IMF sources.</li>
-            <li>Organized income, consumption, health, and industry-scale data into evidence-backed arguments for applied economics papers.</li>
-            <li>Practiced explaining assumptions, data limitations, and business implications in clear language.</li>
+            <li>Reviewed IPO diligence materials and verification memos by cross-checking disclosures against exchange filings, public announcements, company websites, and regulatory databases.</li>
+            <li>Updated industry and quarterly decks by synthesizing operating metrics, policy updates, peer benchmarking, and market-growth assumptions.</li>
+            <li>Pressure-tested revenue drivers, cost structure, capacity trends, and competitive positioning for client-facing materials.</li>
+          </ul>
+          <div class="chips">
+            <span class="chip">IPO diligence</span>
+            <span class="chip">Supply chain</span>
+            <span class="chip">Industry research</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience">
+      <div class="section-head">
+        <h2>Experience Map</h2>
+        <p class="section-note">A broader view of the internships and research work behind the homepage.</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="date">Jul 2026-Present</div>
+          <div>
+            <h3>CICC Investment Banking, Transportation & Logistics</h3>
+            <p class="role">IPO diligence, transportation and supply-chain industry analysis, client-ready materials.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="date">Jul 2026-Present</div>
+          <div>
+            <h3>LOLA Extension and Headline Agent</h3>
+            <p class="role">Independent applied AI research and product build for generated headline scoring, ranking, and experimentation.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="date">May-Jul 2026</div>
+          <div>
+            <h3>Baidu Search / Ads / Recommendation Optimization</h3>
+            <p class="role">Search accessibility diagnostics, technical SEO analysis, crawler visibility, and growth-oriented remediation roadmaps.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="date">May-Jul 2026</div>
+          <div>
+            <h3>Juliu AI Startup, Business Operations and Product Analytics</h3>
+            <p class="role">Python procurement monitoring, opportunity prioritization, response-rate KPI tracking, and outreach A/B testing with a 15% lift.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="date">Feb-Apr 2026</div>
+          <div>
+            <h3>Guojin Securities, Consumer Sector Research</h3>
+            <p class="role">Financial, valuation, sales, and industry-tracking data for recurring consumer-sector research and company benchmarking.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="date">Dec 2025-Feb 2026</div>
+          <div>
+            <h3>UIUC Professor Eck Sports Analytics Lab</h3>
+            <p class="role">100+ year MLB panel data construction, cross-source validation, benchmark cohorts, PCA, and similarity metrics.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="date">May-Aug 2025</div>
+          <div>
+            <h3>USTC Cognitive Intelligence Lab</h3>
+            <p class="role">LLM + knowledge graph reasoning evaluation, ablation tracking, hallucination analysis, and reproducible experiment tables.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="date">May-Aug 2024</div>
+          <div>
+            <h3>Huaan Securities, Fixed Income and Investment Advisory</h3>
+            <p class="role">Recurring 1/3/5/10-year market data workbooks for yields, volatility, fund performance, ETFs, and index tracking.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-head">
+        <h2>Research & Builds</h2>
+        <p class="section-note">Technical projects that show how I think through models, data, and product use cases.</p>
+      </div>
+      <div class="two-col">
+        <article class="card">
+          <h3>Recommender Systems and Geometric Deep Learning</h3>
+          <p class="role">DU-Net / MG-GAT reproduction, MovieLens and Yelp</p>
+          <ul>
+            <li>Built end-to-end Python, pandas, NumPy, SciPy, and PyTorch pipelines for ingestion, feature engineering, graph construction, training, and RMSE evaluation.</li>
+            <li>Implemented matrix factorization and graph-attention models, improving Yelp RMSE from 1.455 to 1.344.</li>
+            <li>Connected model tradeoffs to ranking, personalization, graph signals, and explainability in customer-intelligence settings.</li>
+          </ul>
+        </article>
+        <article class="card">
+          <h3>Sports Card Investment Portfolio</h3>
+          <p class="role">Founder and lead analyst, Feb 2023-Present</p>
+          <ul>
+            <li>Built a structured transaction and portfolio tracker across sports-card marketplaces to analyze pricing, liquidity, demand, player performance, holding periods, and turnover.</li>
+            <li>Executed 5,000+ tracked transactions and used data-driven decisions to manage sourcing, resale timing, and downside risk.</li>
+            <li>Developed a practical feel for marketplace behavior, customer communication, and pricing under imperfect information.</li>
           </ul>
         </article>
       </div>
@@ -551,28 +718,25 @@
     <section>
       <div class="section-head">
         <h2>Education</h2>
-        <p class="section-note">Analytics training with statistics and economics foundation.</p>
+        <p class="section-note">Analytics training built on statistics, economics, and applied research.</p>
       </div>
-      <div class="grid">
+      <div class="two-col">
         <article class="card">
-          <div class="item-title">
-            <strong>University of California, Berkeley</strong>
-            <span class="date">2026 - 2027</span>
-          </div>
-          <p class="role">M.S. in Analytics</p>
-          <ul>
-            <li>Focus: machine learning, optimization, data systems, business analytics, experimentation, and decision-making.</li>
-          </ul>
+          <h3>University of California, Berkeley</h3>
+          <p class="role">M.S. in Analytics, 2026-2027</p>
+          <p class="tagline">
+            Focus: machine learning, optimization, statistical modeling, experimentation,
+            data systems, and decision-making.
+          </p>
         </article>
         <article class="card">
-          <div class="item-title">
-            <strong>University of Illinois Urbana-Champaign</strong>
-            <span class="date">Aug 2022 - Dec 2025</span>
-          </div>
+          <h3>University of Illinois Urbana-Champaign</h3>
           <p class="role">B.S. in Statistics & Economics, GPA 3.90/4.00</p>
-          <ul>
-            <li>James Scholar, Dean's List, Departmental Distinction in Statistics.</li>
-          </ul>
+          <p class="tagline">
+            James Scholar, Dean's List, Departmental Honors in Statistics. Coursework
+            included statistical modeling, data management, probability, forecasting,
+            health economics, and baseball analytics.
+          </p>
         </article>
       </div>
     </section>
@@ -580,41 +744,62 @@
     <section id="skills">
       <div class="section-head">
         <h2>Skills</h2>
-        <p class="section-note">A mix of technical execution and business-facing communication.</p>
+        <p class="section-note">Grouped by how I use them in real work, not just as keyword lists.</p>
       </div>
-      <div class="skill-columns">
-        <div class="card">
-          <h3>Data & Engineering</h3>
+      <div class="skill-grid">
+        <article class="card">
+          <h3>Data & ML</h3>
           <ul>
             <li>Python, SQL, R, Excel</li>
-            <li>pandas, NumPy, SciPy, PyTorch</li>
-            <li>BeautifulSoup, Chrome DevTools, Lighthouse</li>
-            <li>Streamlit, GitHub, Hugging Face</li>
+            <li>pandas, NumPy, SciPy</li>
+            <li>PyTorch, Hugging Face</li>
+            <li>Regression, ranking, validation</li>
           </ul>
-        </div>
-        <div class="card">
-          <h3>Analytics Methods</h3>
+        </article>
+        <article class="card">
+          <h3>Search & Product</h3>
           <ul>
-            <li>A/B testing and experimentation</li>
-            <li>Financial and industry analysis</li>
-            <li>Data cleaning and validation</li>
-            <li>Benchmarking and dashboard-ready reporting</li>
+            <li>BM25, PageRank concepts</li>
+            <li>SSR/CSR diagnostics</li>
+            <li>robots.txt, sitemaps, metadata</li>
+            <li>A/B testing, KPI design</li>
           </ul>
-        </div>
-        <div class="card">
-          <h3>Domains</h3>
+        </article>
+        <article class="card">
+          <h3>Finance & Business</h3>
           <ul>
-            <li>Investment banking and TMT</li>
-            <li>Search, ads, and web optimization</li>
-            <li>Sports analytics and digital media</li>
-            <li>Operations and supply chain research</li>
+            <li>IPO diligence support</li>
+            <li>Industry research</li>
+            <li>Valuation indicators</li>
+            <li>Competitive benchmarking</li>
           </ul>
-        </div>
+        </article>
+        <article class="card">
+          <h3>Communication</h3>
+          <ul>
+            <li>Client-ready decks</li>
+            <li>Research write-ups</li>
+            <li>Methodology notes</li>
+            <li>Chinese native, English fluent</li>
+          </ul>
+        </article>
       </div>
     </section>
 
+    <section>
+      <div class="section-head">
+        <h2>How I Like To Work</h2>
+        <p class="section-note">The connective tissue across my finance, data, and AI work.</p>
+      </div>
+      <p class="callout">
+        I like problems where the data is imperfect and the question is not fully formed yet:
+        verify the source, define the metric, test the assumption, build the artifact, and
+        explain the result in language a teammate or client can actually use.
+      </p>
+    </section>
+
     <footer>
-      <span id="year"></span> Zijian (James) Shen. Built as a living portfolio for analytics, finance, and product-focused roles.
+      <span id="year"></span> Zijian (James) Shen. Portfolio for analytics, finance, search, and applied AI roles.
     </footer>
   </main>
 
