@@ -201,30 +201,29 @@
       font-size: 0.94rem;
     }
 
-    .quick-stats {
+    .honor-list {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
     }
 
-    .stat {
+    .honor {
       border: 1px solid var(--line);
       border-radius: 8px;
-      padding: 12px;
+      padding: 13px 14px;
       background: #fbfcfd;
     }
 
-    .stat strong {
+    .honor strong {
       display: block;
-      font-size: 1.18rem;
-      line-height: 1;
+      font-size: 1rem;
+      line-height: 1.2;
     }
 
-    .stat span {
+    .honor span {
       display: block;
-      margin-top: 4px;
+      margin-top: 5px;
       color: var(--muted);
-      font-size: 0.82rem;
+      font-size: 0.86rem;
     }
 
     section {
@@ -426,17 +425,17 @@
 
     .photo-grid {
       display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 10px;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
     }
 
     .photo-grid.cards {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .mini-photo {
       width: 100%;
-      aspect-ratio: 1;
+      aspect-ratio: 4 / 3;
       border-radius: 8px;
       border: 1px solid var(--line);
       object-fit: cover;
@@ -557,11 +556,15 @@
           <a href="mailto:shenjames824@gmail.com">shenjames824@gmail.com</a>
           <a href="https://zijianss.github.io/">zijianss.github.io</a>
         </div>
-        <div class="quick-stats">
-          <div class="stat"><strong>3.90</strong><span>UIUC GPA</span></div>
-          <div class="stat"><strong>17K</strong><span>A/B-tested headlines</span></div>
-          <div class="stat"><strong>15%</strong><span>response-rate lift</span></div>
-          <div class="stat"><strong>5,000+</strong><span>market transactions</span></div>
+        <div class="honor-list">
+          <div class="honor">
+            <strong>Dean's List</strong>
+            <span>Consistent academic recognition at UIUC</span>
+          </div>
+          <div class="honor">
+            <strong>Departmental Distinction in Statistics</strong>
+            <span>Recognized outstanding graduate in the Statistics department</span>
+          </div>
         </div>
       </aside>
     </div>
