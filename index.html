@@ -400,9 +400,9 @@
       min-height: 360px;
       border-radius: 8px;
       border: 1px solid var(--line);
-      background-image: url("assets/profile.jpg");
+      background-image: url("assets/life/life-main.jpg");
       background-size: cover;
-      background-position: 58% 36%;
+      background-position: 54% 48%;
     }
 
     .life-copy {
@@ -411,24 +411,37 @@
       gap: 12px;
     }
 
-    .photo-strip {
+    .life-gallery {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 10px;
-      margin-top: 10px;
+      gap: 14px;
+      margin-top: 6px;
     }
 
-    .photo-slot {
-      min-height: 92px;
-      border: 1px dashed #c7d2da;
-      border-radius: 8px;
-      background: #fbfcfd;
+    .gallery-title {
+      margin: 0 0 8px;
+      color: var(--ink);
+      font-size: 0.9rem;
+      font-weight: 760;
+    }
+
+    .photo-grid {
       display: grid;
-      place-items: center;
-      color: var(--muted);
-      font-size: 0.82rem;
-      text-align: center;
-      padding: 10px;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .photo-grid.cards {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .mini-photo {
+      width: 100%;
+      aspect-ratio: 1;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      object-fit: cover;
+      background: #fbfcfd;
+      display: block;
     }
 
     .callout {
@@ -484,6 +497,11 @@
 
       .life-photo {
         min-height: 300px;
+      }
+
+      .photo-grid,
+      .photo-grid.cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
   </style>
@@ -695,7 +713,7 @@
     <section id="life">
       <div class="section-head">
         <h2>Life Outside Work</h2>
-        <p class="section-note">A little context beyond resumes: sports, food, travel, trading cards, and people.</p>
+        <p class="section-note">A little context beyond resumes: sports, food, trading cards, and people.</p>
       </div>
       <div class="life-grid">
         <div class="life-photo" role="img" aria-label="Zijian Shen outside work"></div>
@@ -703,7 +721,7 @@
           <h3>I care a lot about the human side of work.</h3>
           <p class="tagline">
             Outside academic and professional projects, I spend a lot of time around sports,
-            collectibles, food, travel, and conversations with friends. Those interests are not
+            collectibles, food, and conversations with friends. Those interests are not
             separate from my work: they are where I learned to read markets, understand people,
             communicate clearly, and stay curious about how decisions actually get made.
           </p>
@@ -712,10 +730,24 @@
             fan behavior, and media attention closely, which is why sports analytics and
             entertainment analytics are natural career directions for me.
           </p>
-          <div class="photo-strip" aria-label="Future life photo placeholders">
-            <div class="photo-slot">sports / game day</div>
-            <div class="photo-slot">campus / travel</div>
-            <div class="photo-slot">cards / collections</div>
+          <div class="life-gallery">
+            <div>
+              <p class="gallery-title">Sports / Game Day</p>
+              <div class="photo-grid">
+                <img class="mini-photo" src="assets/life/sports-1.jpg" alt="Sports and game day photo 1" />
+                <img class="mini-photo" src="assets/life/sports-2.jpg" alt="Sports and game day photo 2" />
+                <img class="mini-photo" src="assets/life/sports-3.jpg" alt="Sports and game day photo 3" />
+                <img class="mini-photo" src="assets/life/sports-4.jpg" alt="Sports and game day photo 4" />
+              </div>
+            </div>
+            <div>
+              <p class="gallery-title">Cards / Collections</p>
+              <div class="photo-grid cards">
+                <img class="mini-photo" src="assets/life/cards-1.jpg" alt="Sports card collection photo 1" />
+                <img class="mini-photo" src="assets/life/cards-2.jpg" alt="Sports card collection photo 2" />
+                <img class="mini-photo" src="assets/life/cards-3.jpg" alt="Sports card collection photo 3" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
