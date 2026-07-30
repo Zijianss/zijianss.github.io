@@ -390,24 +390,26 @@
 
     .life-grid {
       display: grid;
-      grid-template-columns: minmax(280px, 0.86fr) minmax(0, 1.14fr);
+      grid-template-columns: 1fr;
       gap: 16px;
-      align-items: stretch;
     }
 
     .life-photo {
-      min-height: 360px;
+      min-height: 520px;
       border-radius: 8px;
       border: 1px solid var(--line);
       background-image: url("assets/life/life-main.jpg");
-      background-size: cover;
-      background-position: 54% 48%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: #fff8ef;
     }
 
     .life-copy {
       display: grid;
-      align-content: center;
+      grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
       gap: 12px;
+      align-items: start;
     }
 
     .life-gallery {
@@ -496,6 +498,10 @@
 
       .life-photo {
         min-height: 300px;
+      }
+
+      .life-copy {
+        grid-template-columns: 1fr;
       }
 
       .photo-grid,
